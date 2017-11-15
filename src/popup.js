@@ -1,9 +1,9 @@
-const title = document.querySelector('h1');
+const title = document.querySelector('h1 .tab-size-display');
 const tabSize = document.querySelector('.tab-size');
 
 // Save tab size
 showTabSize = () => {
-	title.innerText = `GitHub Tab Size: ${tabSize.value}`;
+	title.innerText = String(tabSize.value);
 	chrome.storage.sync.set({
 		tabSize: tabSize.value
 	});
@@ -18,5 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		tabSize: 8
 	}, items => {
 		tabSize.value = items.tabSize;
+		title.innerText = String(items.tabSize);
 	});
 });
