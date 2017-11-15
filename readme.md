@@ -6,6 +6,10 @@ GitHub's default tab size is a whopping 8 spaces! This extension lets you set yo
 
 ![Demo](https://i.imgur.com/Y3Rf9SF.gif)
 
+## TODO
+
+Only set the query parameter if there are elements matching `[data-tab-size]` on the page
+
 ## Related
 
 - [`gifgen`](https://github.com/lukechilds/gifgen) - Simple high quality GIF encoding
