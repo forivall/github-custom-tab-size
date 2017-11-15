@@ -18,6 +18,5 @@ document.addEventListener('DOMContentLoaded', () => {
 		tabSize: 8
 	}, items => {
 		tabSize.value = items.tabSize;
-		showTabSize();
 	});
 });

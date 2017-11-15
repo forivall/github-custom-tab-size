@@ -1,11 +1,11 @@
 {
-	"name": "GitHub Custom Tab Size",
-	"version": "1.0.3",
+	"name": "GitHub Default Tab Size",
+	"version": "1.0.0",
 	"icons": {
 		"256": "icon.png"
 	},
-	"description": "Make tab indented code more readable by allowing you to set a custom tab size",
-	"homepage_url": "https://github.com/lukechilds/github-custom-tab-size",
+	"description": "Make tab indented code more readable by allowing you to set a default tab size",
+	"homepage_url": "https://github.com/forivall/github-custom-tab-size",
 	"manifest_version": 2,
 	"minimum_chrome_version": "36",
 	"browser_action": {
@@ -25,5 +25,10 @@
 				"src/content.js"
 			]
 		}
-	]
+	],
+	"applications": {
+		"gecko": {
+			"id": "jcjfkmdkcaopkioccnpbhiemfcmpnghe@forivall"
+		}
+	}
 }
