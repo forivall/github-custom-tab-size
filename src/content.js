@@ -2,14 +2,15 @@
 // Set tab size styles
 
 const setTabSizeStyles = (size, checkPreset = false) => {
-	const search = new URLSearchParams(window.location.search)
+	const loc = window.location
+	const search = new URLSearchParams(loc.search)
 	if (checkPreset && search.has('ts')) {
 		return;
 	}
 
 	if (size !== 8 || search.get('ts') !== null) {
 		search.set('ts', size);
-		window.history.replaceState(null, '', '?' + search.toString());
+		window.history.replaceState(null, '', '?' + search.toString() + loc.hash)
 	}
 	Array.from(document.querySelectorAll('[data-tab-size]')).forEach((el) => {
 		el.dataset.tabSize = size;
